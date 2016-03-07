@@ -73,7 +73,7 @@ insertAtCursor: function(myValue) {
   <div class="container-fluid">
   <div class="row">
   <div class="col-lg-11">
-    <h2>Claudia 2.0 - the only interface that you will need for your database coursework.</h2>
+    <h2>Claudia 2016 - the only interface that you will need for your database coursework.</h2>
   </div>
   <div class="col-lg-1">
     <a href="http://www.doc.ic.ac.uk/~cmy14">Jason Yu</a> &copy; 2015
@@ -82,40 +82,37 @@ insertAtCursor: function(myValue) {
     <h4>As usual, use it at your own risk.</h4>
   </div>
       <div class="col-lg-6">
-        <b>Main Relations</b><br />
-        <p>
-        <a href="#">clonedtdb.staff</a>&nbsp;<a href="#">[show]</a>(login, email, lastname, firstname, telephone, room, deptrole, department, validfrom, validto)<br />
-        <a href="#">clonedtdb.student</a>&nbsp;<a href="#">[show]</a>(login, email, lastname, status, entryyear, externaldept, validfrom, validto)<br />
-        <a href="#">clonedtdb.course</a>&nbsp;<a href="#">[show]</a>(code, title, syllabus, term, classes, popestimate, validfrom, validto)<br />
-        <a href="#">clonedtdb.class</a>&nbsp;<a href="#">[show]</a>(degreeid, yr, degree, degreeyr, major, majoryr, letter, letteryr, validfrom, validto)<br />
-        <a href="#">clonedtdb.degree</a>&nbsp;<a href="#">[show]</a>(title, code, major, grp, letter, years, validfrom, validto)<br />
-        <a href="#">clonedtdb.book</a>&nbsp;<a href="#">[show]</a>(code, title, authors, publisher)<br />
-        </p>
-        <b>Many-to-Many Joining Relations</b><br />
-        <p>
-        <a href="#">clonedtdb.xcourseclass</a>&nbsp;<a href="#">[show]</a>(courseid, classid, required, examcode)<br />
-        <a href="#">clonedtdb.xcoursebook</a>&nbsp;<a href="#">[show]</a>(courseid, bookid, rating)<br />
-        <a href="#">clonedtdb.xcoursestaff</a>&nbsp;<a href="#">[show]</a>(courseid, staffid, staffhours, role, term)<br />
-        <a href="#">clonedtdb.xstudentclass</a>&nbsp;<a href="#">[show]</a>(studentid, classid)<br />
-        <a href="#">clonedtdb.xstudentstaff</a>&nbsp;<a href="#">[show]</a>(studentid, staffid, role, grp, projecttitle)<br />
-        </p>
+<ul>
+<li><a href="#">actor</a> <a href="#">[show]</a> - stores actors  data  including first name  and last  name.</li>
+<li><a href="#">film</a> <a href="#">[show]</a> - stores films data  such  as  title,  release year, length, rating, etc.</li>
+<li><a href="#">film_actor</a> <a href="#">[show]</a> - stores the relationships between films and actors.</li>
+<li><a href="#">category</a> <a href="#">[show]</a> - stores film's categories  data.</li>
+<li><a href="#">film_category</a> <a href="#">[show]</a> - stores the relationships between films and categories.</li>
+<li><a href="#">store</a> <a href="#">[show]</a> - contains the stores  data  including manager staff and address.</li>
+<li><a href="#">inventory</a> <a href="#">[show]</a> - stores inventory data.</li>
+<li><a href="#">rental</a> <a href="#">[show]</a> - stores rental  data.</li>
+<li><a href="#">payment</a> <a href="#">[show]</a> - stores customer's payments.</li>
+<li><a href="#">staff</a> <a href="#">[show]</a> - stores staff data.</li>
+<li><a href="#">customer</a> <a href="#">[show]</a> - stores customers data.</li>
+<li><a href="#">address</a> <a href="#">[show]</a> - stores address data  for staff and customers</li>
+<li><a href="#">city</a> <a href="#">[show]</a> - stores the city  names.</li>
+<li><a href="#">country</a> <a href="#">[show]</a> - stores the country names.</li>
+</ul>
       </div>
       <div class="col-lg-6">
         <b>Questions</b>
         <ol>
-          <li>List the last name of staff whose first name either is Alex, Alexandra or Alexander.</li>
-          <li>List the last name of staff who have started working at the college before 2008.</li>
-          <li>List the last names of pairs of staff who started working in the same year.</li>
-        <li>Find the earliest any member of staff could have joined the department of computing (use the validfrom
-        attribute).</li>
-        <li>Find all unique names of staff and students sorted alphabetically.</li>
-        <li>List the last name of all staff that teach a student with login 'rf6111'.</li>
-        <li>List all titles of books of which the title contains 'book' which are used in a course not taught by Paul Kelly.</li>
-        <li>Count the number of books not used in any course.</li>
-        <li>Using a nested query, find the names of all students who take a course which is either Programming,
-        Architecture or Hardware.</li>
-        <li>Using a nested query, find the titles of courses students have to take to complete a degree related to
-        Bioinformatics.</li>
+<li>Find all films  that  are not in  the inventory and count them.</li>
+<li>Count  the number  of  transactions  each  staff has been  processing and  find  
+the  staff  member   (id)  with  the   biggest   number  of  transactions  and   also 
+the staff member  with  the biggest sum of  the transaction value.</li>
+<li>Find all stores  with  more  than  300 customers. Report the ID of the store.</li>
+<li>Find  all   customers   who   spent   more  than  200. Report   the   ID  of  the  
+customer  as  well  as  the sum spent.</li>
+<li>Find the films whose rental  rate  is  higher  than  the average rental  rate. Use 
+ubquery  and count the number  of  films.</li>
+<li>Find films  that  have  return  date  between   2005-05-29  and   2005-05-30
+and report  the movie titles. Use a subquery.</li>
         <ol>
       </div>
     </div> 
@@ -123,7 +120,7 @@ insertAtCursor: function(myValue) {
     <br />
     <label for="direct" style="cursor:pointer">
       <input id="direct" style="cursor:pointer" type="checkbox" checked="checked">
-      nice outlook (non-official php script to connect to the database, but still modified from the official script.)
+      nice outlook (non-official php script to connect to the same database.)
     </label>
     <div class="query"></div>
     <iframe style="width:100%; height:550px; border:0px">

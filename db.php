@@ -29,13 +29,17 @@
     
     
     // SQL access
-    define ( 'DB_NAME', 'db_c130');
+    define ( 'DB_NAME', 'theinis');
+    
     define ( 'DB_USER', 'lab');
+    
     define ( 'DB_PASSWORD', 'lab');
+    
     define ( 'DB_HOST', 'db.doc.ic.ac.uk');
+    
     define ( 'DB_CHARSET', 'utf8');
     
-    $DB_ID = pg_connect("host=db.doc.ic.ac.uk port=5432 dbname=db_c130 user=theinis password=NAuG2K6esJ")
+    $DB_ID = pg_connect("host=db.doc.ic.ac.uk port=5432 dbname=theinis user=lab password=lab")
     or die("Database '".DB_NAME."' not accessible.<br>\n");
     
     
