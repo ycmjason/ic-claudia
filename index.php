@@ -37,6 +37,7 @@ if(!withinHour($userIp,$logs)){
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
+if (window.location.protocol != "https:") window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
 document.domain = "www.doc.ic.ac.uk"
 //REFERENCE: http://richonrails.com/articles/text-area-manipulation-with-jquery
     $.fn.extend({
@@ -82,6 +83,7 @@ insertAtCursor: function(myValue) {
     <h4>As usual, use it at your own risk.</h4>
   </div>
       <div class="col-lg-6">
+Database relations:
 <ul>
 <li><a href="#">actor</a> <a href="#">[show]</a> - stores actors  data  including first name  and last  name.</li>
 <li><a href="#">film</a> <a href="#">[show]</a> - stores films data  such  as  title,  release year, length, rating, etc.</li>
